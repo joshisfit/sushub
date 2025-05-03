@@ -1,0 +1,14 @@
+local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local placeId = 102453613205090 -- Baseplate for testing
+
+print("Running teleport script...")
+print("LocalPlayer:", localPlayer)
+
+if localPlayer then
+    print("Teleporting to", placeId)
+    TeleportService:Teleport(placeId, localPlayer)
+else
+    warn("LocalPlayer not found. Try running from GUI or after game fully loads.")
+end
